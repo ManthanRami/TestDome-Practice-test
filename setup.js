@@ -1,0 +1,1 @@
+function setup () {$('.remove').click(function(){$(this).parent().remove();});}
