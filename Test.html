@@ -5,44 +5,35 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script lang="javascript" >  
     $(document).ready(function(){
-      closestRelative("James","Mike");
+      setup();
     });
     
     
-  function closestRelative(parent, relativeName)
-  {
-    // Implement function here
-    var t=document.getElementsByTagName(parent);
-    var c=$(t).children();
-    var ch=$(relativeName);
-    for(var x in c)
-    {
-      if(x[1]=="mike")
-      {
-        return $(x);
-      }
-    
+    function setup() {
+     // Write your code here.
+      var cardArray=$(".card").click(function() {
+        for(var i=0; i<cardArray.length;i++)
+        {
+          cardArray[i].innerHTML="down";
+        }
+        this.innerHTML="up";
+      });
+      
     }
-    
-    
-    if(t.length==1)
-    {
-      return $(t);
-    }
-    else
-    {
-      return $(t[0]);
-    }
-  }
   </script>
 </head>
 <body>
-  
-  <James>
-    <Dave></Dave>
-    <Mike></Mike>
-    <Sarah></Sarah>
-  </James>
-
+  <table id="card-container">
+    <tbody >
+      <tr >
+        <td class="card" style="border: 1px solid black;">down</td>
+        <td class="card" style="border: 1px solid black;">up</td>
+      </tr>
+      <tr style="border: 1px solid black;">
+        <td class="card" style="border: 1px solid black;">down</td>
+        <td class="card" style="border: 1px solid black;">down</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 </html>
