@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<script>
+//more use of javascript
 function endangeredSpecies(continent, species) {
   // Implement the function here.
   var par=document.getElementsByTagName("ul");
@@ -22,7 +18,6 @@ function endangeredSpecies(continent, species) {
     }
 }
 
-</script>
 <div>
   <ul data-continent="North America">
     <li data-species="California condor">Critically Endangered</li>
@@ -33,6 +28,11 @@ function endangeredSpecies(continent, species) {
   </ul>
   <button onclick="endangeredSpecies('Europe','Cave bear');"></button>
 </div>
-</body>
-</html>
 
+
+//more use of jQuery
+function endangeredSpecies(continent, species) {
+  
+  return $("[data-continent='"+continent+"']").find("[data-species='"+species+"']").text();// Implement the function here.
+ }
+ 
